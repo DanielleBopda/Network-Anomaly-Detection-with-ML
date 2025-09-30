@@ -4,7 +4,7 @@
 This project applies Machine Learning (ML), Decision Trees, and Neural Networks to develop an Intrusion Detection System (IDS) capable of identifying cyber threats such as DDoS, Port Scans, and Web Attacks. Using the CICIDS2017 dataset (2.8M+ records, 79 features), this study tackles cybersecurity challenges with a data-driven approach.
 
 ## Objective
-*Build a scalable, automated IDS for real-time cyber threat detection.
+Build a scalable, automated IDS for real-time cyber threat detection.
 *Overcome traditional systems' limitations in handling high-volume, complex network traffic.
 *Apply Decision Trees & Neural Networks to detect anomalies & rare attack patterns.
 
