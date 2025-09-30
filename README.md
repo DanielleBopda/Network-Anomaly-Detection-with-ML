@@ -1,47 +1,47 @@
-Intrusion Detection Using ML
-Advanced Intrusion Detection System using Machine Learning (CICIDS2017)
- Executive Summary
+# Intrusion Detection Using ML: Advanced Intrusion Detection System using Machine Learning (CICIDS2017)
+ 
+ ## Executive Summary
 This project applies Machine Learning (ML), Decision Trees, and Neural Networks to develop an Intrusion Detection System (IDS) capable of identifying cyber threats such as DDoS, Port Scans, and Web Attacks. Using the CICIDS2017 dataset (2.8M+ records, 79 features), this study tackles cybersecurity challenges with a data-driven approach.
-Objective
-✔ Build a scalable, automated IDS for real-time cyber threat detection.
-✔ Overcome traditional systems' limitations in handling high-volume, complex network traffic.
-✔ Apply Decision Trees & Neural Networks to detect anomalies & rare attack patterns.
-Key Achievements
- 97% Accuracy with Decision Tree model for common attacks (SYN Flag Count).
- Neural Network outperformed for rare attacks like SQL Injection & Web Attacks.
- Data Optimization: Chunked processing (10,000 rows) prevented memory crashes.
- Feature Engineering: Addressed missing values, outliers, and class imbalances.
- Dataset Overview (CICIDS2017)
-Dataset
-Size
-Features
-Attack Types
-CICIDS2017
-2.8M+ records
-79
-DDoS, PortScan, Botnet, SQL Injection, Brute Force
-Key Features: Flow Duration, Packet Length, Flag Counts, Flow Bytes/s.
-Challenges: Data imbalance, large size (causing crashes), missing values, and high dimensionality.
-Methodology
-1. Data Processing & Cleaning
-Chunked Processing: Processed 10K rows at a time to prevent system crashes.
-Imputation: Replaced missing values (Median for Flow Bytes/s, IQR for outlier removal).
-Feature Selection: Used correlation analysis & heatmaps to optimize features.
-Class Imbalance Handling: Applied SMOTE (Synthetic Minority Oversampling Technique).
-2. Model Development
-2.1. Decision Tree Model
-Achieved 97% accuracy for common attacks.
-Identified important features: SYN Flag Count, Flow Duration, Fwd Packets.
-Strengths: High interpretability, fast performance.
-Weaknesses: Struggled with rare attacks.
-2.2. Neural Network Model (Optimized)
+
+## Objective
+*Build a scalable, automated IDS for real-time cyber threat detection.
+*Overcome traditional systems' limitations in handling high-volume, complex network traffic.
+*Apply Decision Trees & Neural Networks to detect anomalies & rare attack patterns.
+
+## Key Achievements
+ *97% Accuracy with Decision Tree model for common attacks (SYN Flag Count).
+ *Neural Network outperformed for rare attacks like SQL Injection & Web Attacks.
+ *Data Optimization: Chunked processing (10,000 rows) prevented memory crashes.
+ *Feature Engineering: Addressed missing values, outliers, and class imbalances.
+ 
+ ## Dataset Overview (CICIDS2017)
+*Dataset: CICIDS2017
+*Size: 2.8M+ records 
+*Feature: 79
+*Attack Types: DDoS, PortScan, Botnet, SQL Injection, Brute Force
+*Key Features: Flow Duration, Packet Length, Flag Counts, Flow Bytes/s.
+*Challenges: Data imbalance, large size (causing crashes), missing values, and high dimensionality.
+
+## Methodology
+### 1. Data Processing & Cleaning
+*Chunked Processing: Processed 10K rows at a time to prevent system crashes.
+*Imputation: Replaced missing values (Median for Flow Bytes/s, IQR for outlier removal).
+*Feature Selection: Used correlation analysis & heatmaps to optimize features.
+*Class Imbalance Handling: Applied SMOTE (Synthetic Minority Oversampling Technique).
+
+### 2. Model Development
+##### 2.1. Decision Tree Model
+*Achieved 97% accuracy for common attacks.
+*Identified important features: SYN Flag Count, Flow Duration, Fwd Packets.
+*Strengths: High interpretability, fast performance.
+*Weaknesses: Struggled with rare attacks.
+#### 2.2. Neural Network Model (Optimized)
 Initial Accuracy: 0.196 → Optimized Accuracy: 0.324
 Performed better for rare attack detection (SQL Injection, Web Attacks).
 Optimizations:
 Increased neurons per layer, added dropout layers for overfitting control.
 Adjusted batch size to 64 for model stability.
 Increased epochs to 50 to refine learning.
-
 Weakness: Computationally expensive, still requires class balance improvements.
 Data Visualizations
 1. Correlation Heatmap
